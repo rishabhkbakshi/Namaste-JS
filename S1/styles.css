@@ -1,0 +1,69 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+table {
+    border: 1px solid red;
+}
+
+table>tr,
+td,
+th {
+    border: 1px solid red;
+}
+
+span[title$='spn'] {
+    font-weight: bold;
+    opacity: 0.3;
+}
+
+span[title^='Aao'] {
+    font-weight: bold;
+    color: blue;
+}
+
+span[title*='tera'] {
+    font-weight: bold;
+    text-decoration: underline;
+    color: red;
+}
+
+#long {
+    width: 200px;
+    word-wrap: break-word;
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+    text-shadow: 2px 2px 5px black;
+}
+
+#pic {
+    width: auto;
+    height: 150px;
+    background: #000;
+    /* Mozilla */
+    -moz-box-shadow: 2px 2px 5px black;
+    /* WebKit */
+    -webkit-box-shadow: 2px 2px 5px black;
+}
+
+#round {
+    width: 200px;
+    padding: 10px;
+    border: 1.5px solid red;
+    border-radius: 21px;
+    /* Mozilla */
+    -moz-border-radius: 15px;
+    /* WebKit */
+    -webkit-border-radius: 15px;
+
+    /* Mozilla */
+    /* -moz-column-count: 4;
+    -moz-column-gap: 0.5em;
+    -moz-column-rule: 0px; */
+
+    /* WebKit */
+    /* -webkit-column-count: 5;
+    -webkit-column-gap: 0.6em;
+    -webkit-column-rule: 1px; */
+}
