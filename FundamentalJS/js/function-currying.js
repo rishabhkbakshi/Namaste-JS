@@ -27,7 +27,7 @@ multiplyByTwo(2, 3); // passing here both the parameter here
 let multiplyByThree = multiply.bind(this, 3);
 multiplyByThree(5);// Output: 15  // 3 * 5 = 15
 
-//-----------------------That is function curring using bind method
+//-----------------------That is function currying using bind method
 // The question is 'What is closure'
 // Answer :- when a function return a function then 
 // the inner function will the access the varible of there lexical scope

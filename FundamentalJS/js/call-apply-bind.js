@@ -31,7 +31,7 @@ printFullName.call(nameObj2, 'Jaipur', 'Rajasthan');
 
 
 //--------------------------------Apply--------------------------------
-// in .apply method, you have to give the object as a first parameter and rest all parameter will be in array
+// in .apply method, you have to give the object as a first argument and rest all argument will be in array
 printFullName.apply(nameObj, ['Merta Road', 'Rajasthan']);
 printFullName.apply(nameObj2, ['Jaipur', 'Rajasthan']);
 
