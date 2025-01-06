@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage Event Example</title>
+</head>
+
+<body>
+    <h1 id="output">Hello!</h1>
+    <button id="update">Update Message</button>
+
+    <script>
+        // Listen for the storage event
+        window.addEventListener('storage', function (e) {
+            console.log('Storage event triggered:');
+            console.log('Key:', e.key);
+            console.log('Old Value:', e.oldValue);
+            console.log('New Value:', e.newValue);
+
+            // Update UI based on the change
+            if (e.key === 'message') {
+                const output = document.getElementById('output');
+                output.textContent = e.newValue || 'Hello!';
+            }
+        });
+
+        // Add a button to change localStorage
+        const button = document.getElementById('update');
+        button.addEventListener('click', () => {
+            const newMessage = prompt('Enter a new message:');
+            if (newMessage) {
+                localStorage.setItem('message', newMessage);
+            }
+        });
+    </script>
+</body>
+
+</html>
