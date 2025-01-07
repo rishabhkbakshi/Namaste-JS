@@ -161,4 +161,4 @@ localStorage.setItem('user', JSON.stringify(userObj)); // convert object to JSON
 
 // to get an object from localStorage
 const user = JSON.parse(localStorage.getItem('user')); // convert JSON string to object
-console.log(person); // it will print the object {name: 'John', age: 30}
+console.log(user); // it will print the object {name: 'John', age: 30}
