@@ -20,12 +20,40 @@
         iframe {
             border: 1px solid black;
         }
+
+        fieldset {
+            border: 1px solid black;
+            margin-top: 20px;
+
+            legend {
+                border: 1px solid black;
+            }
+
+            div {
+                min-width: 100px;
+                min-height: 100px;
+                padding: 30px;
+                border: 1px solid black;
+            }
+        }
     </style>
 </head>
 
 <body>
     <p>Learning The Fundamentals of JavaScript</p>
     <input type="text" onkeyup="debounceData()" />
+
+    <fieldset>
+        <legend>Event Bubbling and Capturing</legend>
+        <div id="grandparent">
+            <div id="parent">
+                <div id="child"></div>
+            </div>
+        </div>
+    </fieldset>
+
+    <script src="js/event-bubbling-n-capturing.js">
+    </script>
     <script src="js/call-apply-bind.js">
     </script>
     <script src="js/polyfill-for-bind-method.js">
@@ -41,6 +69,7 @@
     <script src="js/prototypal-inheritance.js">
     </script>
     <br><br>
+
     <p> Local Storage Concept</p>
     <span>
         Steps to Reproduce in a Browser
