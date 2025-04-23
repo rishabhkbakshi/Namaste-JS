@@ -9,6 +9,11 @@
 
 var i = 10;
 console.log(i);
+// console.log(i++);
+// This is it the setTImeout function
+// the concept of the setTimeout function is that it will execute the function after the time specified in milliseconds
+// but the function will be executed after the time specified in milliseconds
+// but the code will be executed before the function is executed
 setTimeout(function () {
   console.log('hi');
 }, 1000)
@@ -47,6 +52,7 @@ function testArgAndRests2(p1, p2, ...rest) {
   console.log(p1)
   console.log(p2)
   console.log(rest.push(5))
+  console.log(rest)
 }
 
 testArgAndRests(1, 2, 3, 4)

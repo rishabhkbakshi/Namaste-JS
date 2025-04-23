@@ -1,3 +1,3 @@
 # Namaste-JS
-Its not a descriptive repo. It is just code.
-To understand the concepts i added the comments in the code.
+This repository is not meant to be descriptive. It primarily contains code.
+To understand the concepts, comments have been added within the code.
