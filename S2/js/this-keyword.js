@@ -57,6 +57,9 @@ const obj2 = {
     a: 20,
     b: 30,
     c: 40,
+    p: () => {
+        console.log(this); // this will be the global object (window object) because arrow function does not have their own this, it take the value from their lexical scope where they are enclosed
+    },
     test() {
         console.log(this); // this will be the obj2 object because test is a method of obj2 object
     },
@@ -76,6 +79,7 @@ const obj2 = {
     }
 }
 obj2.x();
+obj2.p();
 
 
 // this inside DOM elements => reference to the HTML element
