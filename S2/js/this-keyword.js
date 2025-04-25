@@ -1,30 +1,32 @@
 "use strict";
 
 // this is global space
-console.log(this); // this in global space represent the global object.In case of browser is Window Object.
+console.log(this); // this in global space represent the global object.
+// In case of browser is Window Object.
 
 
 // this inside a function
 function x() {
     // the value depends on strict (this will the undefined) / non-strict mode (window object)
-    console.log(this);
+    console.log(this); // this in function will represent the global object (window object) in non-strict mode
 }
 x();
 
 // this in strict mode - (this subsitution)
-// if the value of this keyword is undefined or null 
+// if the value of 'this' keyword is undefined or null 
 // this keyword will be replaced with globalObject
 // only in non-strict mode.
 
 // this keyword depends on how the function is called (window object)
-// if you are the function without any references then this become undefined
-window.x(); // if you are calling this function then it will return window object 
+// if you are calling the function without any references then this become undefined
+// window.x(); // if you are calling the function then it will return window object 
 
 // this inside a object's method
 const student = {
     name: 'Rishabh',
     printName: function () {
-        console.log(this.name); // this in object's method will represent the object itself
+        // this in object's method will represent the object itself
+        console.log(this.name);  // this will be the student object log: 'Rishabh'
     }
 };
 
@@ -38,31 +40,37 @@ student.printName(); // this will call the method printName of the object studen
 const student2 = {
     name: 'Bakshi'
 }
-student.printName.call(student2); // value of this = student2
+// value of this = student2
+student.printName.call(student2); // Bakshi
 
 // this inside arrow function = does not have their own this, 
-// they take the value from their lexical scope where they are enclosed
+// it take the value from their lexical scope where they are enclosed
 const obj = {
     a: 10,
     x: () => {
         console.log(this);
     }
 }
-obj.x();
+obj.x(); // this will be the global object (window object) because arrow function does not have their own this.
 
 const obj2 = {
     a: 20,
+    b: 30,
+    c: 40,
+    test() {
+        console.log(this); // this will be the obj2 object because test is a method of obj2 object
+    },
     x: function () {
 
         const obj3 = {
             z: () => {
-                console.log(this); // this in obj3 will represent obj3
+                console.log(this); // this will be the obj2 object because arrow function does not have their own this, it take the value from their lexical scope where they are enclosed
             }
         }
         // enclosing lexical context
         const y = () => {
             console.log(this);
-            obj3.z(); // this will call the method z of the object obj3.
+            obj3.z(); // this will be the obj2 object because arrow function does not have their own this, it take the value from their lexical scope where they are enclosed
         }
         y();
     }
@@ -71,4 +79,3 @@ obj2.x();
 
 
 // this inside DOM elements => reference to the HTML element
- 
