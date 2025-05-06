@@ -83,3 +83,25 @@ obj2.p();
 
 
 // this inside DOM elements => reference to the HTML element
+function test() {
+    const a = window.innerWidth;
+    let b = a < 1000;
+    const c = a >= 1500 ? 7 : a >= 1300 ? 6 : a >= 1200 ? 5 : a >= 1000 ? 4 : 7;
+}
+
+
+function test() {
+    const a = window.innerWidth;
+    let b = a < 1000;
+    let c;
+
+    if (a >= 1500 || a < 1000) {
+        c = 7;
+    } else if (a >= 1300) {
+        c = 6;
+    } else if (a >= 1200) {
+        c = 5;
+    } else if (a >= 1000) {
+        c = 4;
+    }
+}
