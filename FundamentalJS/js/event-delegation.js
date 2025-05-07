@@ -1,28 +1,9 @@
-document.querySelector('#category')
-    .addEventListener('click', (event) => {
-
-        console.log(event.target);
-        if (event.target.tagName === 'li') {
-            window.location.href = '/' + event.target.id;
-        }
-
-    });
-
-
-document.querySelector('#form')
-    .addEventListener('keyup', (event) => {
-
-        console.log(event);
-        if (event.target.dataset.uppercase != undefined) {
-            event.target.value = event.target.value.toUpperCase();
-        }
-
-    });
-
 // so what is event delegation -
 // Instead of attaching an event listener to each individual element, you attach it to a parent element.
-// The event listener then checks to see if the event occurred on the target element or any of its children.
-// This is much more efficient and scalable.
+// When the event occurs, it bubbles up to the parent element, which can then handle the event for all of its children.
+// This is particularly useful for lists, tables, or any other collection of elements where you want to handle events in a similar way.
+// For example, if you have a list of items and you want to handle clicks on each item, instead of adding a click event listener to each item, you can add it to the parent element (the list) and use event delegation to handle the clicks.
+// This way, you only have one event listener instead of many, which is more efficient and easier to manage.
 
 // What is the benefit of the event delegation
 // 1. Memory Efficiency: It consumes less memory because we attach the event listener directly to the parent element instead of multiple child elements.
@@ -52,3 +33,26 @@ document.querySelector('#form')
  * 6. Limited Access to Child Element Properties: You might need additional code to access specific properties of child elements.
  * 7. Overhead for Simple Scenarios: For very simple cases with few elements, direct binding might be more straightforward.
  */
+
+document.querySelector('#category')
+    .addEventListener('click', (event) => {
+
+        console.log(event.target);
+        console.log(event.target.tagName); // 'LI'
+        if (event.target.tagName.toLowerCase() === 'li') {
+            window.location.href = '/' + event.target.id;
+        }
+
+    });
+
+
+document.querySelector('#form')
+    .addEventListener('keyup', (event) => {
+
+        console.log(event);
+        if (event.target.dataset.uppercase != undefined) {
+            event.target.value = event.target.value.toUpperCase();
+        }
+
+    });
+

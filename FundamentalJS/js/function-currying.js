@@ -1,7 +1,17 @@
+/**
+ * Function currying is a technique in functional programming where a function with multiple arguments is transformed into a sequence of functions, each taking a single argument. 
+ * This allows for partial application of functions and can lead to more reusable and composable code.
+ * 
+ * In JavaScript, function currying can be achieved using closures or the bind method.
+ */
+
+
+//-----------------------That is function currying using bind method
+// In this example, we will use the bind method to create a new function that takes a single argument and multiplies it by a fixed value.
+// This is a simple example of function currying using the bind method.
 let multiply = function (x, y) {
     console.log(x * y);
 }
-
 
 let multiplyByTwo = multiply.bind(this, 2);
 // basically multiply.bind(this, 2) is equivalent to the below function
@@ -27,12 +37,13 @@ multiplyByTwo(2, 3); // passing here both the parameter here
 let multiplyByThree = multiply.bind(this, 3);
 multiplyByThree(5);// Output: 15  // 3 * 5 = 15
 
-//-----------------------That is function currying using bind method
+//-----------------------Now we will see function currying using closures
 // The question is 'What is closure'
 // Answer :- when a function return a function then 
-// the inner function will the access the varible of there lexical scope
+// the inner function will have the access the varible of there lexical scope
 // even after the returning the function. 
-// This actually it is preseting the value of x to their inner function
+
+// This actually it is presenting the value of x to their inner function
 let multiplyUsingClosure = function (x) {
     return function (y) {
         console.log(x * y);

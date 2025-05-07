@@ -108,7 +108,7 @@ localStorage.getItem('key') // it will print 'value'
  * localStorage.removeItem is use to remove the saved data from the browser.
  * It takes the key as a parameter.
  * 
- * It returns nothing => Means if the key does not exist in localStorage
+ * It returns nothing (undefined) => Means if the key does not exist in localStorage
  */
 localStorage.removeItem('key');
 
@@ -117,7 +117,7 @@ localStorage.removeItem('key');
  * localStorage.clear is use to remove all saved data from the browser.
  * It does not take any parameter.
  * 
- * It returns nothing => Means if there is no data in localStorage
+ * It returns nothing (undefined) => Means if there is no data in localStorage
  */
 // localStorage.clear() 
 
@@ -153,7 +153,7 @@ const userObj = {
 // localStorage.getItem('user'); // it will print like '[object Object]' in the console
 
 /**
- * So if you wnat to store object type data in the localStorage
+ * So if you want to store object type data in the localStorage
  * 
  * You have to do like this
  */

@@ -41,7 +41,7 @@
 
 <body>
     <p>Learning The Fundamentals of JavaScript</p>
-    <input type="text" onkeyup="debounceData()" />
+    <input type="text" onkeyup="debounceData(this.value)" />
 
     <fieldset>
         <legend>Event Bubbling and Capturing</legend>
@@ -55,7 +55,7 @@
     <fieldset>
         <legend>Event Delegation</legend>
         <div>
-            Exmaple 1 <br>
+            Example 1 <br>
             <ui id="category">
                 <li id="laptops">laptops</li>
                 <li id="cameras">cameras</li>

@@ -1,3 +1,11 @@
+/**
+ * Event Bubbling and Capturing
+ * Event bubbling is a mechanism in JavaScript where an event starts from the target element and bubbles up to the parent elements.
+ * Event capturing is the opposite, where the event starts from the parent element and goes down to the target element.
+ * Event bubbling is the default behavior in JavaScript.
+ * Event capturing is less commonly used, but can be useful in certain situations.
+ */
+
 document.querySelector('#grandparent')
     .addEventListener('click', function () {
         // if (event.target.tagName === 'BUTTON') {
