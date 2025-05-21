@@ -1,4 +1,4 @@
-let radius = [4, 2, 1, 3, 5];
+let radius1 = [4, 2, 1, 3, 5];
 
 function area(radius) {
     return Math.PI * radius * radius;
@@ -33,6 +33,6 @@ Array.prototype.circleCalculation = function (radius, logic) {
 // console.log(circleCalculation(radius, diameter));
 
 
-console.log(radius.circleCalculation(radius, area));
-console.log(radius.circleCalculation(radius, circumference));
-console.log(radius.circleCalculation(radius, diameter));
+console.log(radius1.circleCalculation(radius1, area));
+console.log(radius1.circleCalculation(radius1, circumference));
+console.log(radius1.circleCalculation(radius1, diameter));

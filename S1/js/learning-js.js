@@ -866,6 +866,9 @@ y = 6 // It will give the error
 console.log(y);
 let y;
 
-
+//--------------------------------------------------------------------------
+// the smallest javascript code is a empty .js file
+// if you are trying to run the empty .js file then it will run without any error
+// if you put a debugger statement in the empty .js file then it will stuck over there
 
 

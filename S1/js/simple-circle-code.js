@@ -1,4 +1,4 @@
-let radius = [4, 2, 1, 3, 5];
+let radius2 = [4, 2, 1, 3, 5];
 
 function calculateArea(radius) {
     let areas = [];
@@ -8,7 +8,7 @@ function calculateArea(radius) {
     return areas;
 }
 
-console.log(calculateArea(radius));
+console.log(calculateArea(radius2));
 
 function calculateCircumference(radius) {
     let circumference = [];
@@ -18,7 +18,7 @@ function calculateCircumference(radius) {
     return circumference;
 }
 
-console.log(calculateCircumference(radius));
+console.log(calculateCircumference(radius2));
 
 function calculateDiameter(radius) {
     let diameter = [];
@@ -28,4 +28,4 @@ function calculateDiameter(radius) {
     return diameter;
 }
 
-console.log(calculateDiameter(radius));
+console.log(calculateDiameter(radius2));
