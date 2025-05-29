@@ -32,13 +32,16 @@ let getData = (val) => {
  * @returns the inner function which actually debounced the event
  */
 let debouce = function (fn, delay) {
-    let timer;
-    return function () {
+    let timer; // this will hold the timer ID
+    return function () { // this is the inner function which will be returned by the debouce function
+        // This function will be called when the event is triggered
+        // It will debounce the getData function
+        // It means it will wait for the specified delay before executing the getData function
         let context = this; // here this is the window object 
         // as we know that 'this' in arrow function represent the lexical parent object.
         let args = arguments; // arguments => to handle the arguments if it call. arguments is only available in non-arrow function.
         // So here we are using non-arrow function to get the arguments.
-        // arguments is an array-like object accessible inside functions that contains the values of the arguments passed to that function. 
+        // arguments => is an array-like object accessible inside functions that contains the values of the arguments passed to that function. 
         clearTimeout(timer); // clear the timer
         // If the timer is already set, clear it to prevent the function from executing
         // This will be executed after delay milliseconds
